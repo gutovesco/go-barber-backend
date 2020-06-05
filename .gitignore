@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+.idea/
+.vscode/
+build/
+temp/
+.DS_store
+
+tmp/*
+!tmp/.gitkeep
