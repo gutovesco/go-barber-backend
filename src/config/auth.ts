@@ -1,6 +1,6 @@
 export default {
   jwt: {
-    secret: 'chaveseretadotokenjwt',
-    expiresIn: '1d',
+    secret: process.env.APP_SECRET,
+    expiresIn: '7d',
   },
 };
