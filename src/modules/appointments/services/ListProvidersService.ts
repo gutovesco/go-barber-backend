@@ -1,3 +1,4 @@
+import { classToClass } from 'class-transformer';
 import { inject, injectable } from 'tsyringe';
 
 import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICacheProvider';
@@ -32,7 +33,10 @@ class ListProvidersService {
 
     console.log('A query no banco foi feita');
 
-    await this.cacheProvider.save(`providers-list: ${user_id}`, users);
+    await this.cacheProvider.save(
+      `providers-list: ${user_id}`,
+      classToClass(users),
+    );
 
     return users;
   }
